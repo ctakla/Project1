@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Gallery</title>
+<link rel='stylesheet' href='band.css'/>
+</head>
+<body>
+<nav id="nav">
+	<a href="band.html"><img src="images/salt.jpg" height="45px" width="140px"></a>
+  		<!-- Navigation links -->
+  		<div id="myLinks">
+    			<a href="gallery.html">Gallery</a>
+			<a href="about.html">About</a>
+    			<a href="contact.html">Contact</a>
+		</div>
+</nav>
+<br>
+<br>
+<h1>Gallery<a href="band.html"><button class="home" type="button";">Home</button></a></h1>
+<div class="container">
+	<div class="gallery">
+		<div class="image"><img src="images/abstral1.jpg"></div>
+		<div class="image"><img src="images/abstral2.jpg"></div>
+		<div class="image"><img src="images/abstral3.jpg"></div>
+		<div class="image"><img src="images/abstral4.jpg"></div>
+		<div class="image"><img src="images/abstral5.jpg"></div>
+		<div class="image"><img src="images/abstral6.jpg"></div>
+		<div class="image"><img src="images/bwgig.jpg"></div>
+		<div class="image"><img src="images/gig2.jpg"></div>
+		<div class="image"><img src="images/wed.jpg"></div>
+		<div class="image"><img src="images/wed2.jpg"></div>
+		<div class="image"><img src="images/wed3.jpg"></div>
+		<div class="image"><img src="images/wed4.jpg"></div>
+	</div>
+
+	<div class="popup">
+	<span>&times</span>
+	<img src="images/abstral1.jpg">
+	</div>
+</div>
+<div class="icons">
+		<a href="https://www.facebook.com/profile.php?id=100006015887125" target="_blank"><img src="images/fb.jpg" width="50px" height="50px"></a>
+		<a href="https://x.com/christina_takla" target="_blank"><img src="images/x.png" width="50px" height="50px"></a>
+</div>
+		
+<script>
+
+document.querySelectorAll('.gallery img').forEach(image =>{ 
+	image.onclick = () =>{
+	document.querySelector('.popup').style.display = 'block';
+	document.querySelector('.popup img').src = image.getAttribute('src');
+	}
+});
+
+document.querySelector('.popup span').onclick = () =>{
+document.querySelector('.popup').style.display = 'none';}
+</script>
+
+</body>
+</html>
